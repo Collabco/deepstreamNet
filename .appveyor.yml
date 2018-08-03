@@ -21,4 +21,4 @@ build_script:
   - ps: dotnet build -c Release .\src\DeepStreamNet
   - ps: dotnet pack -c Release --no-build --include-symbols .\src\DeepStreamNet
 artifacts:
-- path: src\DeepStreamNet\bin\Release\*.nupkg  
+- path: src\DeepStreamNet\bin\Release\*.nupkg
