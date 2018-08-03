@@ -22,3 +22,9 @@ build_script:
   - ps: dotnet pack -c Release --no-build --include-symbols .\src\DeepStreamNet
 artifacts:
 - path: src\DeepStreamNet\bin\Release\*.nupkg
+deploy:
+- provider: NuGet
+  server: https://www.myget.org/F/myday/api/v2/package
+  api_key:
+    secure: bHutb0U3Jh8cT/iLTbfDkSHWbNbRTjfbQ7taY17GXUhe0dvhgw/PsMABpTWCp1Wt
+  symbol_server: https://www.myget.org/F/myday/api/v2/package
